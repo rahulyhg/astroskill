@@ -1,0 +1,54 @@
+<?php
+/**
+* @file
+* A block module that displays recent blog and forum posts.
+*/
+/**
+* Implementation of hook_install
+*/
+
+
+function davinder_schema() {
+
+    $schema['davinder'] = array(
+
+            'description' => 'Storing content migration info from Joomla.',
+            'fields' => array(
+
+                    'id' => array(
+                            'description' => 'id',
+                            'type' => 'serial',
+                    ),
+                    'content_type' => array(
+                            'description' => 'content type',
+                            'type' => 'varchar',
+                            'not null' => TRUE,
+                            'length' => 255,
+                    ),
+                    'imported_count' => array(
+                            'description' => 'imported count',
+                            'type' => 'int',
+                            'not null' => TRUE,
+                            'default' => 0,
+                    ),
+                    'to_import_count' => array(
+                            'description' => 'to import count',
+                            'type' => 'int',
+                            'not_null' => TRUE,
+                    ),
+                    'is_imported' => array(
+                            'description' => 'is imported',
+                            'type' => 'int',
+                            'default' => 0,
+                    ),
+            ),
+            'primary key' => array('id'),
+            'indexes' => array(
+                    'id' => array('id'),
+            ),
+    );
+    return $schema;
+
+}
+
+
