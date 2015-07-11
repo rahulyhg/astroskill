@@ -73,12 +73,15 @@
           <img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" />
         </a></div><?php endif; ?>
         <?php else: ?>
+       
         <h2 id="site-name">
           <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>"><?php print $site_name; ?></a>
         </h2>
+         
         <?php if ($site_slogan): ?><div id="site-slogan"><?php print $site_slogan; ?></div><?php endif; ?>
         <?php endif; ?>
       </div>
+        
       <?php if (theme_get_setting('socialicon_display', 'multipurpose')): ?>
       <?php 
       $twitter_url = check_plain(theme_get_setting('twitter_url', 'multipurpose')); 
@@ -88,7 +91,11 @@
       ?>
       <div id="header-social" class="clr">
         <ul>
-          <?php if ($facebook_url): ?><li>
+          <?php if ($facebook_url): ?>
+            <div>
+        <?php print render($page['top']); ?>
+    </div>
+            <li>
             <a target="_blank" title="<?php print $site_name; ?> in Facebook" href="<?php print $facebook_url; ?>"><img alt="Facebook" src="<?php print base_path() . drupal_get_path('theme', 'multipurpose') . '/images/social/facebook.png'; ?>"> </a>
           </li><?php endif; ?>
           <?php if ($twitter_url): ?><li>
@@ -106,7 +113,9 @@
         </ul>
       </div>
       <?php endif; ?>
+            
     </header>
+      
   </div>
 
   <div id="sidr-close"><a href="#sidr-close" class="toggle-sidr-close"></a></div>
@@ -222,6 +231,6 @@
   <?php endif; ?>
 
   <footer id="copyright-wrap" class="clear">
-    <div id="copyright"><?php print t('Copyright'); ?> &copy; <?php echo date("Y"); ?>, <a href="<?php print $front_page; ?>"><?php print $site_name; ?></a>. <?php print t('Theme by'); ?>  <a href="http://www.devsaran.com" title="Devsaran" target="_blank">Devsaran</a>.</div>
+    <div id="copyright"><?php print t('Copyright'); ?> &copy; <?php echo date("Y"); ?>, <a href="<?php print $front_page; ?>"><?php print $site_name; ?></a>. <?php print t('Designed by'); ?>  <a href="http://www.davinder.in" title="Davinder" target="_blank">Davinder</a>.</div>
   </footer>
 </div>
