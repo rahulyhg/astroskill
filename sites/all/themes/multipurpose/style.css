@@ -284,6 +284,7 @@ h1.page-title {
   height: auto;
   max-width: 97.4%;
   margin: 0.5em 1em 0.5em 0;
+  float: left;
 }
 
 .node-teaser p {
