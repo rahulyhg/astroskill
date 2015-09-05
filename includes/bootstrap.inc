@@ -3541,3 +3541,4 @@ function drupal_clear_opcode_cache($filepath) {
     @apc_delete_file($filepath);
   }
 }
+

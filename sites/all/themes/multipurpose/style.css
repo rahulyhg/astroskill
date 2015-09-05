@@ -32,7 +32,7 @@ select { max-width: 100%; }
 ================================================== */
 body { 
     
-       background: #ddd; background-image: url("http://localhost/astroskill/sites/default/files/a.jpg");color: #676767; font: 14px/1.6 'Open Sans', Helvetica Neue, Helvetica, Arial; -webkit-font-smoothing: antialiased; }
+       background: #ddd; background-image: url("http://dev.astroskill.com/sites/default/files/a.jpg");color: #676767; font: 14px/1.6 'Open Sans', Helvetica Neue, Helvetica, Arial; -webkit-font-smoothing: antialiased; }
 body a { color: #02aace; text-decoration: none; }
 body a:hover { color: #000; }
 .container { margin: 0 auto; width: 1000px; box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; }
