@@ -1,0 +1,27 @@
+name = Moderation
+description = An entity moderation queue.
+core = 7.x
+
+;http://drupal.org/node/1435418
+dependencies[] = entity
+dependencies[] = views
+dependencies[] = rules
+dependencies[] = rules_conditional
+;Currently is devel depended, this should be undone sometime.
+;dependencies[] = devel
+
+scripts[] = moderation.js
+
+files[] = moderation.admin.inc
+files[] = moderation_type.admin.inc
+files[] = views/moderation.views.inc
+files[] = views/handlers/moderation_handler_actions_field.inc
+files[] = views/handlers/moderation_handler_entity_field_label.inc
+files[] = views/handlers/moderation_handler_filter_entity_bundle.inc
+
+; Information added by drupal.org packaging script on 2012-09-04
+version = "7.x-1.0-alpha1"
+core = "7.x"
+project = "moderation"
+datestamp = "1346753220"
+
